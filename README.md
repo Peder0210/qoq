@@ -8,9 +8,9 @@ Projektet handler om udlejning af bøger, i form af en 'middle-man' der sætter 
 Projektet indeholder følgende elementer:
 
 - Biblotikar (Express script)
-- Brugergrænseflade (Electron)
+- Brugergrænseflade (Website)
 - Brugersystem (lån, aflever, betal, forlængelse, brugeroplysninger, reservere)
 - Database (MongoDB)
 
 
-## Test
+## 
