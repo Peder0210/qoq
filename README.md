@@ -1,7 +1,8 @@
-"# qoq" 
+
+
 
 # Beskrivelse af projekt
-Projektet handler om at låne bøger, via. online dialog.
+Projektet handler om udlejning af bøger, i form af en 'middle-man' der sætter lejere og udlejere i dialog.
 
 # Kravspecifikation
 Projektet indeholder følgende elementer:
@@ -10,3 +11,6 @@ Projektet indeholder følgende elementer:
 - Brugergrænseflade (Electron)
 - Brugersystem (lån, aflever, betal, forlængelse, brugeroplysninger, reservere)
 - Database (MongoDB)
+
+
+## Test
