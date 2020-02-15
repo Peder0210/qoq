@@ -35,7 +35,9 @@ app.get("/create",function(req,res){
     "ISBN": "7864201337"
   }
   db.collection("books").insert(item);
-  res.send("Succesfully inserted item.");
+  
+  res.setHeader("Content-Type","application/json");
+  res.end(JSON.stringify(req.query, null, 2));  
 });
 
 
