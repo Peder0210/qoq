@@ -14,23 +14,23 @@ mongoose.connect("mongodb://localhost:5000/items");
 let db = mongoose.connection;
 // Retrieve posts
 app.get("/browse",function(req,res){
-
   // Set response header
   res.setHeader("Content-Type","application/json");
-
-  // Get all books
+  // Declare placeholder variable
   var all_books = [];
+  // Execute query and parse results
   db.collection("books").find().forEach(function(item){
     all_books.push(item);
   }).then(()=>{
+    // Write results to stream
     res.write(JSON.stringify(all_books,null,2));
   }).then(()=>{
+    // End connection
     res.end();
   }).catch((e)=>{
     console.log(e);
   });
 });
-
 
 // Create item
 app.get("/create",function(req,res){
