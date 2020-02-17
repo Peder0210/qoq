@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 mongoose.connect("mongodb://localhost:5000/items");
 // Get reference
 let db = mongoose.connection;
+
+
 // Retrieve posts
 app.get("/browse",function(req,res){
   // Set response header
@@ -31,6 +33,7 @@ app.get("/browse",function(req,res){
     console.log(e);
   });
 });
+
 
 // Create item
 app.get("/create",function(req,res){
@@ -52,10 +55,12 @@ app.get("/create",function(req,res){
   res.end("Item created:\n\n "+JSON.stringify(item, null, 2));
 });
 
+
 // Temporary page route
 app.get("/create_page",function(req,res){
   res.sendFile(path.join(__dirname,"..","Pages","create.html"));
 });
+
 
 // Temporary page route
 app.get("/browse_page",function(req,res){
